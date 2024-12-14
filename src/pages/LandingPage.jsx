@@ -1,14 +1,20 @@
 import MyCard from '../components/Card.jsx'
-const cardData=['Hola','Buen día']
+import { useNavigate } from "react-router";
+
+const cardData=[]
 
 const LandingPage = () => {
 
+    const navigate = useNavigate()
     return (<>
-    {cardData.map((Word)=>{
-        return (
-            <MyCard cardText={Word}></MyCard>
-        )
-    })}
+
+    
+ 
+            <MyCard cardText={'Epic card just for existing and say you welcome'}
+            cardTitle={'WELCOME WELCOME!'} onClickAction={()=>{navigate("/agenda")
+                
+            }}></MyCard>
+        
     </>)
 
 }
