@@ -1,15 +1,16 @@
 import { Button } from "react-bootstrap"
 import { deleteContactList } from "./Calls"
 
-function Contact({contactData,buttonFunction}){
+function Contact({text,buttonFunction,openContact,isVisible}){
 
 
 return(
 <>
 
-<div key={contactData.id} style={{marginBottom:"5px",width:"50% " , display:"flex" , justifyContent:"space-between"}} >{contactData.slug}
+<div  style={{marginBottom:"5px",width:"50% " , display:"flex" , justifyContent:"space-between"}} >{text}
 
         <Button  variant="outline-secondary" onClick={()=>{buttonFunction()}}> X </Button>
+        <Button  variant="outline-secondary" onClick={()=>{openContact()}}> Show </Button>
         </div>
 
   </>
